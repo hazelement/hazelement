@@ -1,4 +1,0 @@
-#!/bin/bash
-pelican content -o output -s pelicanconf.py
-ghp-import output
-git push ssh://git@github.com/hazelement/hazelement.github.io.git gh-pages:master

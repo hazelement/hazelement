@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>reStructured Text Syntax</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Haze">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="On Coding">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="https://hazelement.github.io/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://hazelement.github.io/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="">
+
+<!-- <meta name="twitter:creator" content="">
+<meta name="twitter:url" content="https://hazelement.github.io/restructured-text-syntax.html">
+<meta name="twitter:title" content="On Coding ~ reStructured Text Syntax">
+<meta name="twitter:description" content="<div class="section" id="a-page-with-popular-restructured-text-syntax">
+<h2>A page with popular reStructured Text Syntax</h2>
+<div class="section" id="id1">
+<h3>A page with popular reStructured Text Syntax</h3>
+<p>A page with popular reStructured Text Syntax</p>
+</div>
+</div>
+<div class="section" id="title">
+<h2>Title</h2>
+<div class="section" id="subtitle">
+<h3>Subtitle</h3>
+<p>This is a paragraph.</p>
+<p>Paragraphs line up at their left
+edges, and are normally separated
+by blank lines.</p>
+<p>Plain text      Typical result</p>
+<p>This is a normal text …</p></div></div>">
+
+<!- Facebook Meta Data -->
+<!-- <meta property="og:title" content="On Coding ~ reStructured Text Syntax" />
+<meta property="og:description" content="<div class="section" id="a-page-with-popular-restructured-text-syntax">
+<h2>A page with popular reStructured Text Syntax</h2>
+<div class="section" id="id1">
+<h3>A page with popular reStructured Text Syntax</h3>
+<p>A page with popular reStructured Text Syntax</p>
+</div>
+</div>
+<div class="section" id="title">
+<h2>Title</h2>
+<div class="section" id="subtitle">
+<h3>Subtitle</h3>
+<p>This is a paragraph.</p>
+<p>Paragraphs line up at their left
+edges, and are normally separated
+by blank lines.</p>
+<p>Plain text      Typical result</p>
+<p>This is a normal text …</p></div></div>" />
+<meta property="og:image" content="" /> --> 
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <!--<center><a href="https://hazelement.github.io"><img id="avatar" src=""></a></center>-->
+    <h1>On Coding</h1>
+      <p>All about coding</p>
+    <br>
+
+
+    <nav class="nav">
+      <ul class="list-bare">
+      
+   
+          <li><a class="nav__link" href="https://hazelement.github.io/">Home</a></li>
+
+         
+         
+      </ul>
+    </nav>
+
+    <br>
+    <form id="searchform" action="/search" onsubmit="return (this.elements['q'].value.length > 0)">
+      <input id="searchbox" type="text" name="q" size="12" placeholder="Search">
+    </form>
+    <br>
+
+    <div>
+      <b>Tags</b><br>
+                <a href="https://hazelement.github.io/tag/jenkins.html"><font color="white">Jenkins</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/django.html"><font color="white">Django</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/continous-deployment.html"><font color="white">Continous Deployment</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/github.html"><font color="white">github</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/pelican.html"><font color="white">Pelican</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/ssh.html"><font color="white">ssh</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/restructured-text.html"><font color="white">reStructured text</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/python.html"><font color="white">python</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/rst.html"><font color="white">rst</font>
+               </a>
+    </div>
+
+    <br>
+    <div>
+      <b>Categories</b><br>
+                <a href="https://hazelement.github.io/category/jenkins.html"><font color="white">Jenkins</font>
+               </a>
+                <a href="https://hazelement.github.io/category/pelican.html"><font color="white">Pelican</font>
+               </a>
+                <a href="https://hazelement.github.io/category/restructuredtext.html"><font color="white">reStructuredText</font>
+               </a>
+    </div>
+
+    <p class="social">
+        <a href="https://github.com/hazelement" target="_blank" ><img src="https://hazelement.github.io/theme/images/icons/github.png"></a>
+    </p>
+
+    <!--
+    <h2>Categories</h2>
+    <ul class="navbar">
+      <li><a href="https://hazelement.github.io/category/jenkins.html">Jenkins</a></li>
+      <li><a href="https://hazelement.github.io/category/pelican.html">Pelican</a></li>
+      <li class="active"><a href="https://hazelement.github.io/category/restructuredtext.html">reStructuredText</a></li>
+    </ul> 
+    -->
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="https://hazelement.github.io/restructured-text-syntax.html" rel="bookmark" title="Permalink to reStructured Text Syntax">reStructured Text Syntax</a></h2>
+
+        <div class="post_list">
+            <span>By </span>
+            <a href="https://hazelement.github.io/author/harry-zheng.html">@Harry Zheng</a>
+            <span> in </span>
+            <span class="post_category"><a href="https://hazelement.github.io/category/restructuredtext.html" rel="bookmark" title="Permalink to reStructuredText">[ reStructuredText ]</a></span>
+            <div>
+                <span class="post_date">Sat 19 November 2016</span>
+                <span>Tags : </span>
+                    <span><a href="https://hazelement.github.io/tag/restructured-text.html">#reStructured text, </a></span>
+                    <span><a href="https://hazelement.github.io/tag/rst.html">#rst, </a></span>
+            </div>
+        </div>
+
+        <div class="entry-content blog-post">
+            <div class="section" id="a-page-with-popular-restructured-text-syntax">
+<h2>A page with popular reStructured Text Syntax</h2>
+<div class="section" id="id1">
+<h3>A page with popular reStructured Text Syntax</h3>
+<p>A page with popular reStructured Text Syntax</p>
+</div>
+</div>
+<div class="section" id="title">
+<h2>Title</h2>
+<div class="section" id="subtitle">
+<h3>Subtitle</h3>
+<p>This is a paragraph.</p>
+<p>Paragraphs line up at their left
+edges, and are normally separated
+by blank lines.</p>
+<p>Plain text      Typical result</p>
+<p>This is a normal text paragraph. The next paragraph is a code sample:</p>
+<pre class="literal-block">
+It is not processed in any way, except
+that the indentation is removed.
+
+It can span multiple lines.
+</pre>
+<p>This is a normal text paragraph again.</p>
+<p>Bullet lists:</p>
+<ul class="simple">
+<li>This is item 1</li>
+<li>This is item 2</li>
+<li>Bullets are &quot;-&quot;, &quot;*&quot; or &quot;+&quot;.
+Continuing text must be aligned
+after the bullet and whitespace.</li>
+</ul>
+<p>Note that a blank line is required
+before the first item and after the
+last, but is optional between items.</p>
+<p>Enumerated lists:</p>
+<ol class="arabic simple" start="3">
+<li>This is the first item</li>
+<li>This is the second item</li>
+<li>Enumerators are arabic numbers,
+single letters, or roman numerals</li>
+<li>List items should be sequentially
+numbered, but need not start at 1
+(although not all formatters will
+honour the first index).</li>
+<li>This item is auto-enumerated</li>
+</ol>
+<p>Definition lists:</p>
+<dl class="docutils">
+<dt>what</dt>
+<dd>Definition lists associate a term with
+a definition.</dd>
+<dt>how</dt>
+<dd>The term is a one-line phrase, and the
+definition is one or more paragraphs or
+body elements, indented relative to the
+term. Blank lines are not allowed
+between term and definition.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Authors:</th><td class="field-body">Tony J. (Tibs) Ibbs,
+David Goodger
+(and sundry other good-natured folks)</td>
+</tr>
+<tr class="field"><th class="field-name">Version:</th><td class="field-body">1.0 of 2001/08/08</td>
+</tr>
+<tr class="field"><th class="field-name">Dedication:</th><td class="field-body">To my father.</td>
+</tr>
+</tbody>
+</table>
+<p>A paragraph containing only two colons
+indicates that the following indented
+or quoted text is a literal block.</p>
+<pre class="literal-block">
+Whitespace, newlines, blank lines, and
+all kinds of markup (like *this* or
+\this) is preserved by literal blocks.
+
+The paragraph containing only '::'
+will be omitted from the result.
+</pre>
+<p>The <tt class="docutils literal">::</tt> may be tacked onto the very
+end of any paragraph. The <tt class="docutils literal">::</tt> will be
+omitted if it is preceded by whitespace.
+The <tt class="docutils literal">::</tt> will be converted to a single
+colon if preceded by text, like this:</p>
+<pre class="literal-block">
+It's very convenient to use this form.
+</pre>
+<p>Literal blocks end when text returns to
+the preceding paragraph's indentation.
+This means that something like this
+is possible:</p>
+<pre class="literal-block">
+    We start here
+  and continue here
+and end here.
+</pre>
+<p>Per-line quoting can also be used on
+unindented literal blocks:</p>
+<pre class="literal-block">
+&gt; Useful for quotes from email and
+&gt; for Haskell literate programming.
+</pre>
+<p>Grid table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="34%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Header 1</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>body row 1</td>
+<td>column 2</td>
+<td>column 3</td>
+</tr>
+<tr><td>body row 2</td>
+<td colspan="2">Cells may span columns.</td>
+</tr>
+<tr><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td rowspan="2"><ul class="first last simple">
+<li>Cells</li>
+<li>contain</li>
+<li>blocks.</li>
+</ul>
+</td>
+</tr>
+<tr><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+<p>Simple table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<p>External hyperlinks, like <a class="reference external" href="http://www.python.org/">Python</a>.</p>
+<p id="example">Internal crossreferences, like <a class="reference internal" href="#example">example</a>.</p>
+<!-- This is an example crossreference target. -->
+</div>
+</div>
+
+        </div>
+        <div class="post_list">
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://hazelement.github.io/restructured-text-syntax.html&text=reStructured Text Syntax&via="><img src="https://hazelement.github.io/theme/images/icons/twitter-s.png"></a></span>
+
+                <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://hazelement.github.io/restructured-text-syntax.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://hazelement.github.io/theme/images/icons/google-s.png"></a></span>
+
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://hazelement.github.io/restructured-text-syntax.html&t=reStructured Text Syntax"><img src="https://hazelement.github.io/theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hazelement.github.io/restructured-text-syntax.html&title=reStructured Text Syntax" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://hazelement.github.io/theme/images/icons/linkedin-s.png"></a>
+
+                <span class="mail"><a href="mailto:?subject=reStructured Text Syntax&amp;body=Check out this article from Haze. https://hazelement.github.io/restructured-text-syntax.html" title="Share by Email" target="_blank"><img src="https://hazelement.github.io/theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+        <div class="comments">
+            <h2>Comments</h2>
+            
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            var disqus_identifier = "restructured-text-syntax.html";
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//https-hazelement-github-io.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </article>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Blog powered by <a href="http://getpelican.com/">Pelican</a>, 
+      which takes great advantage of <a href="http://python.org">Python</a>.
+      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a href="https://parbhatpuri.com/">@parbhat</a>.
+    </p>
+  </footer>
+
+
+</body>
+</html>
