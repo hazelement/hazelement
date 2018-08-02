@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>Using Pelican for Blogging</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Haze">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="On Coding">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="https://hazelement.github.io/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://hazelement.github.io/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="">
+
+<!-- <meta name="twitter:creator" content="">
+<meta name="twitter:url" content="https://hazelement.github.io/using-pelican-for-blogging.html">
+<meta name="twitter:title" content="On Coding ~ Using Pelican for Blogging">
+<meta name="twitter:description" content="<p>Pelican is a popular static website generator written in Python. It saves bloggers from worrying about formats so that they can focus on the content itself. Pelican to bloggers is like Latex to document writters. Pelican take advantage of Markdown and reStructured text (rst) to generated formatted texts. I wrote …</p>">
+
+<!- Facebook Meta Data -->
+<!-- <meta property="og:title" content="On Coding ~ Using Pelican for Blogging" />
+<meta property="og:description" content="<p>Pelican is a popular static website generator written in Python. It saves bloggers from worrying about formats so that they can focus on the content itself. Pelican to bloggers is like Latex to document writters. Pelican take advantage of Markdown and reStructured text (rst) to generated formatted texts. I wrote …</p>" />
+<meta property="og:image" content="" /> --> 
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <!--<center><a href="https://hazelement.github.io"><img id="avatar" src=""></a></center>-->
+    <h1>On Coding</h1>
+      <p>All about coding</p>
+    <br>
+
+
+    <nav class="nav">
+      <ul class="list-bare">
+      
+   
+          <li><a class="nav__link" href="https://hazelement.github.io/">Home</a></li>
+
+         
+         
+      </ul>
+    </nav>
+
+    <br>
+    <form id="searchform" action="/search" onsubmit="return (this.elements['q'].value.length > 0)">
+      <input id="searchbox" type="text" name="q" size="12" placeholder="Search">
+    </form>
+    <br>
+
+    <div>
+      <b>Tags</b><br>
+                <a href="https://hazelement.github.io/tag/jenkins.html"><font color="white">Jenkins</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/django.html"><font color="white">Django</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/continous-deployment.html"><font color="white">Continous Deployment</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/github.html"><font color="white">github</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/pelican.html"><font color="white">Pelican</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/ssh.html"><font color="white">ssh</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/restructured-text.html"><font color="white">reStructured text</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/python.html"><font color="white">python</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/rst.html"><font color="white">rst</font>
+               </a>
+    </div>
+
+    <br>
+    <div>
+      <b>Categories</b><br>
+                <a href="https://hazelement.github.io/category/jenkins.html"><font color="white">Jenkins</font>
+               </a>
+                <a href="https://hazelement.github.io/category/pelican.html"><font color="white">Pelican</font>
+               </a>
+                <a href="https://hazelement.github.io/category/restructuredtext.html"><font color="white">reStructuredText</font>
+               </a>
+    </div>
+
+    <p class="social">
+        <a href="https://github.com/hazelement" target="_blank" ><img src="https://hazelement.github.io/theme/images/icons/github.png"></a>
+    </p>
+
+    <!--
+    <h2>Categories</h2>
+    <ul class="navbar">
+      <li><a href="https://hazelement.github.io/category/jenkins.html">Jenkins</a></li>
+      <li class="active"><a href="https://hazelement.github.io/category/pelican.html">Pelican</a></li>
+      <li><a href="https://hazelement.github.io/category/restructuredtext.html">reStructuredText</a></li>
+    </ul> 
+    -->
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="https://hazelement.github.io/using-pelican-for-blogging.html" rel="bookmark" title="Permalink to Using Pelican for Blogging">Using Pelican for Blogging</a></h2>
+
+        <div class="post_list">
+            <span>By </span>
+            <a href="https://hazelement.github.io/author/harry-zheng.html">@Harry Zheng</a>
+            <span> in </span>
+            <span class="post_category"><a href="https://hazelement.github.io/category/pelican.html" rel="bookmark" title="Permalink to Pelican">[ Pelican ]</a></span>
+            <div>
+                <span class="post_date">Sun 27 November 2016</span>
+                <span>Tags : </span>
+                    <span><a href="https://hazelement.github.io/tag/restructured-text.html">#reStructured text, </a></span>
+                    <span><a href="https://hazelement.github.io/tag/python.html">#python, </a></span>
+                    <span><a href="https://hazelement.github.io/tag/pelican.html">#Pelican, </a></span>
+            </div>
+        </div>
+
+        <div class="entry-content blog-post">
+            <p>Pelican is a popular static website generator written in Python. It saves bloggers from worrying about formats so that they can focus on the content itself. Pelican to bloggers is like Latex to document writters. Pelican take advantage of Markdown and reStructured text (rst) to generated formatted texts. I wrote this website usig rst. Markdown is also a good option as well.</p>
+<div class="section" id="get-started">
+<h2>Get started</h2>
+<p>Pelican has a great tutorial covering the basic steps to setup a website to play with.
+<a class="reference external" href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a>.</p>
+<p>Here is a brief summary of that page.</p>
+<div class="section" id="installation">
+<h3>Installation</h3>
+<p>To install pelican with pip:</p>
+<div class="highlight"><pre><span></span>pip install pelican
+</pre></div>
+<p>If we are using markdown, we can install it with pip too:</p>
+<div class="highlight"><pre><span></span>pip install markdown
+</pre></div>
+</div>
+<div class="section" id="create-a-project">
+<h3>Create a project</h3>
+<p>A directory must be created for our new project:</p>
+<div class="highlight"><pre><span></span>mkdir -p ~/pelican_tutorial
+<span class="nb">cd</span> pelican_tutorial
+</pre></div>
+<p>Once we are in our project directory, we can create a project using the following command:</p>
+<div class="highlight"><pre><span></span>pelican-quickstart
+</pre></div>
+<p>Pelican then will ask us a few questions regarding your website. Don't worry if we are not sure on some of these questions, all these options can be changed afterwards. An example of these questions are here:</p>
+<div class="highlight"><pre><span></span>Welcome to pelican-quickstart v3.6.3.
+
+This script will <span class="nb">help</span> you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+&gt; Where <span class="k">do</span> you want to create your new web site? <span class="o">[</span>.<span class="o">]</span>
+&gt; What will be the title of this web site? my_first_blog
+&gt; Who will be the author of this web site? haze
+&gt; What will be the default language of this web site? <span class="o">[</span>en<span class="o">]</span>
+&gt; Do you want to specify a URL prefix? e.g., http://example.com   <span class="o">(</span>Y/n<span class="o">)</span> n
+&gt; Do you want to <span class="nb">enable</span> article pagination? <span class="o">(</span>Y/n<span class="o">)</span> y
+&gt; How many articles per page <span class="k">do</span> you want? <span class="o">[</span><span class="m">10</span><span class="o">]</span>
+&gt; What is your <span class="nb">time</span> zone? <span class="o">[</span>Europe/Paris<span class="o">]</span>
+&gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? <span class="o">(</span>Y/n<span class="o">)</span> y
+&gt; Do you want an auto-reload <span class="p">&amp;</span> simpleHTTP script to assist with theme and site development? <span class="o">(</span>Y/n<span class="o">)</span> y
+&gt; Do you want to upload your website using FTP? <span class="o">(</span>y/N<span class="o">)</span> n
+&gt; Do you want to upload your website using SSH? <span class="o">(</span>y/N<span class="o">)</span> n
+&gt; Do you want to upload your website using Dropbox? <span class="o">(</span>y/N<span class="o">)</span> n
+&gt; Do you want to upload your website using S3? <span class="o">(</span>y/N<span class="o">)</span> n
+&gt; Do you want to upload your website using Rackspace Cloud Files? <span class="o">(</span>y/N<span class="o">)</span> n
+&gt; Do you want to upload your website using GitHub Pages? <span class="o">(</span>y/N<span class="o">)</span> n
+Done. Your new project is available at /xxx/pelican_tutorial
+</pre></div>
+</div>
+<div class="section" id="create-an-articles-with-category">
+<h3>Create an articles with category</h3>
+<p>Next we are going to create our first post with a category specified. In plelican, each post is a rst file stored within the cotent directory.</p>
+<div class="highlight"><pre><span></span>~/pelican_tutorial/content
+</pre></div>
+<p>Although, categories can be specified within rst file similar to a tag. I prefer to take advantage of folders to put my rst files into each category. In the content folder, if we created folders and put our rst file in each sub folder. Then each folder will be considered as a category.</p>
+<div class="highlight"><pre><span></span>~/pelican_tutorial/tutorial
+</pre></div>
+<p>We just created a tutorial category. And let's create our first post under this category.</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/pelican_tutorial/tutorial
+touch myfirst_tutorial.rst
+</pre></div>
+<p>We can then input content to this rst file. For example:</p>
+<div class="highlight"><pre><span></span><span class="gh">My first tutorial</span>
+<span class="gh">########################</span>
+
+<span class="nc">:date:</span> <span class="nf">2016-11-19 11:30</span>
+<span class="nc">:tags:</span> <span class="nf">reStructured text, rst</span>
+<span class="nc">:authors:</span> <span class="nf">Haze</span>
+
+<span class="gh">=====</span>
+<span class="gh">Title</span>
+<span class="gh">=====</span>
+<span class="gh">Subtitle</span>
+<span class="gh">--------</span>
+This is a paragraph.
+</pre></div>
+<p>Save this file, and we are ready to generate our first post into html file.</p>
+</div>
+<div class="section" id="generate-site">
+<h3>Generate site</h3>
+<p>From site root directory</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/pelican_tutorial
+</pre></div>
+<p>Run the following code to generate your site:</p>
+<div class="highlight"><pre><span></span>pelican content
+</pre></div>
+<p>A folder called output will be generated. This is where our site sits.</p>
+<p>To see how our site looks like, enter output directory:</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> output
+</pre></div>
+<p>Run the local pelican server:</p>
+<div class="highlight"><pre><span></span>python -m pelican.server
+</pre></div>
+<p>Open up web browser, and type in <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a>, we should see the website served from local directory.</p>
+</div>
+</div>
+<div class="section" id="some-tips">
+<h2>Some tips</h2>
+<div class="section" id="autosite-updates">
+<h3>Autosite updates</h3>
+<p>Usually we would like to see our website updates live while we changing the rst file contents, especially during development. This can be achieved by running the following command.</p>
+<div class="highlight"><pre><span></span>make regenerate
+</pre></div>
+<p>&quot;make&quot; is a script at the project root folder. Don't close terminal after running this command as the script is monitoring our project folder to detect any changes. We can continous editing and saving your rst file. All changes will be reflected on your local website. Althought we need to refresh the page of course. One drawback with this script is that if we have a syntax error in the rst file, it will likely crash the script and we would have to restart it again after fixing the syntax. For popular rst syntax, check out my other post, <a class="reference external" href="https://hazelement.github.io/restructured-text-syntax.html">reStructured Text Syntax</a>.</p>
+<p>Next up, <a class="reference external" href="https://hazelement.github.io/setup-pelican-for-github-user-pages.html">Setup Pelican for Github User Pages</a>.</p>
+</div>
+</div>
+
+        </div>
+        <div class="post_list">
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://hazelement.github.io/using-pelican-for-blogging.html&text=Using Pelican for Blogging&via="><img src="https://hazelement.github.io/theme/images/icons/twitter-s.png"></a></span>
+
+                <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://hazelement.github.io/using-pelican-for-blogging.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://hazelement.github.io/theme/images/icons/google-s.png"></a></span>
+
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://hazelement.github.io/using-pelican-for-blogging.html&t=Using Pelican for Blogging"><img src="https://hazelement.github.io/theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hazelement.github.io/using-pelican-for-blogging.html&title=Using Pelican for Blogging" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://hazelement.github.io/theme/images/icons/linkedin-s.png"></a>
+
+                <span class="mail"><a href="mailto:?subject=Using Pelican for Blogging&amp;body=Check out this article from Haze. https://hazelement.github.io/using-pelican-for-blogging.html" title="Share by Email" target="_blank"><img src="https://hazelement.github.io/theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+        <div class="comments">
+            <h2>Comments</h2>
+            
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            var disqus_identifier = "using-pelican-for-blogging.html";
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//https-hazelement-github-io.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </article>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Blog powered by <a href="http://getpelican.com/">Pelican</a>, 
+      which takes great advantage of <a href="http://python.org">Python</a>.
+      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a href="https://parbhatpuri.com/">@parbhat</a>.
+    </p>
+  </footer>
+
+
+</body>
+</html>

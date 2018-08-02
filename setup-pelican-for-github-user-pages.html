@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>Setup Pelican for Github User Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Haze">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="On Coding">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="https://hazelement.github.io/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://hazelement.github.io/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="">
+
+<!-- <meta name="twitter:creator" content="">
+<meta name="twitter:url" content="https://hazelement.github.io/setup-pelican-for-github-user-pages.html">
+<meta name="twitter:title" content="On Coding ~ Setup Pelican for Github User Pages">
+<meta name="twitter:description" content="<p>For those who don't know. Github has this Pages utility which allow each user to setup a personal sub-domain under Github, functioning like a personal blog. It uses a unique git repo for each user to server its file content. For details, check out their website, <a class="reference external" href="https://pages.github.com">https://pages.github.com …</a></p>">
+
+<!- Facebook Meta Data -->
+<!-- <meta property="og:title" content="On Coding ~ Setup Pelican for Github User Pages" />
+<meta property="og:description" content="<p>For those who don't know. Github has this Pages utility which allow each user to setup a personal sub-domain under Github, functioning like a personal blog. It uses a unique git repo for each user to server its file content. For details, check out their website, <a class="reference external" href="https://pages.github.com">https://pages.github.com …</a></p>" />
+<meta property="og:image" content="" /> --> 
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <!--<center><a href="https://hazelement.github.io"><img id="avatar" src=""></a></center>-->
+    <h1>On Coding</h1>
+      <p>All about coding</p>
+    <br>
+
+
+    <nav class="nav">
+      <ul class="list-bare">
+      
+   
+          <li><a class="nav__link" href="https://hazelement.github.io/">Home</a></li>
+
+         
+         
+      </ul>
+    </nav>
+
+    <br>
+    <form id="searchform" action="/search" onsubmit="return (this.elements['q'].value.length > 0)">
+      <input id="searchbox" type="text" name="q" size="12" placeholder="Search">
+    </form>
+    <br>
+
+    <div>
+      <b>Tags</b><br>
+                <a href="https://hazelement.github.io/tag/jenkins.html"><font color="white">Jenkins</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/django.html"><font color="white">Django</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/continous-deployment.html"><font color="white">Continous Deployment</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/github.html"><font color="white">github</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/pelican.html"><font color="white">Pelican</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/ssh.html"><font color="white">ssh</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/restructured-text.html"><font color="white">reStructured text</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/python.html"><font color="white">python</font>
+               </a>
+                <a href="https://hazelement.github.io/tag/rst.html"><font color="white">rst</font>
+               </a>
+    </div>
+
+    <br>
+    <div>
+      <b>Categories</b><br>
+                <a href="https://hazelement.github.io/category/jenkins.html"><font color="white">Jenkins</font>
+               </a>
+                <a href="https://hazelement.github.io/category/pelican.html"><font color="white">Pelican</font>
+               </a>
+                <a href="https://hazelement.github.io/category/restructuredtext.html"><font color="white">reStructuredText</font>
+               </a>
+    </div>
+
+    <p class="social">
+        <a href="https://github.com/hazelement" target="_blank" ><img src="https://hazelement.github.io/theme/images/icons/github.png"></a>
+    </p>
+
+    <!--
+    <h2>Categories</h2>
+    <ul class="navbar">
+      <li><a href="https://hazelement.github.io/category/jenkins.html">Jenkins</a></li>
+      <li class="active"><a href="https://hazelement.github.io/category/pelican.html">Pelican</a></li>
+      <li><a href="https://hazelement.github.io/category/restructuredtext.html">reStructuredText</a></li>
+    </ul> 
+    -->
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="https://hazelement.github.io/setup-pelican-for-github-user-pages.html" rel="bookmark" title="Permalink to Setup Pelican for Github User Pages">Setup Pelican for Github User Pages</a></h2>
+
+        <div class="post_list">
+            <span>By </span>
+            <a href="https://hazelement.github.io/author/harry-zheng.html">@Harry Zheng</a>
+            <span> in </span>
+            <span class="post_category"><a href="https://hazelement.github.io/category/pelican.html" rel="bookmark" title="Permalink to Pelican">[ Pelican ]</a></span>
+            <div>
+                <span class="post_date">Sun 27 November 2016</span>
+                <span>Tags : </span>
+                    <span><a href="https://hazelement.github.io/tag/github.html">#github, </a></span>
+                    <span><a href="https://hazelement.github.io/tag/pelican.html">#Pelican, </a></span>
+                    <span><a href="https://hazelement.github.io/tag/ssh.html">#ssh, </a></span>
+            </div>
+        </div>
+
+        <div class="entry-content blog-post">
+            <p>For those who don't know. Github has this Pages utility which allow each user to setup a personal sub-domain under Github, functioning like a personal blog. It uses a unique git repo for each user to server its file content. For details, check out their website, <a class="reference external" href="https://pages.github.com">https://pages.github.com</a>. There are two types of Github Pages, Project Pages and User Pages. Setting up Project Pages is straight forward. I will be discussing setting up User Pages and some tricks I used to streamline the publishing process.</p>
+<div class="section" id="about-github-pages">
+<h2>About Github Pages</h2>
+<p>Files of a Github page reside in a very specific Github repository that is owned and unique to each user. They look like this format, yourname.github.io, where &quot;yourname&quot; is your Github name. The repository has to follow this format otherwise, it won't work.</p>
+<p>Go ahead and create a new repository named yourname.github.io.</p>
+<p>Once that's setup, you can see it on your Github profile and it is waiting for a init push. Now let's get back to our Pelican project. We don't need to clone it to our local disk.</p>
+</div>
+<div class="section" id="pushings-pelican-output-to-github-repo">
+<h2>Pushings Pelican Output to Github Repo</h2>
+<p>The idea is basically to push Pelican's output folder to the Github repository we just created. To achive this, we have a great tool called <a class="reference external" href="https://github.com/davisp/ghp-import">ghp-import</a>. We can install it easily with the following command:</p>
+<div class="highlight"><pre><span></span>pip install ghp-import
+</pre></div>
+<p>A normal command using ghp-import is like follows:</p>
+<div class="highlight"><pre><span></span>pelican content -o output -s pelicanconf.py
+ghp-import output
+git push git@github.com:username/username.github.io.git gh-pages:master
+</pre></div>
+<p>The first line generate all rst documents into our output folder. ghp-import then import this output folder into a git branch called gh-pages.</p>
+<p>Then the last line push this branch to its remote repository which is our Github User Pages repo, yourname.github.io. gh-pages is our local branch and master is our remote repository branch. Please note that the remote branch must be the master branch for it to work properly.</p>
+<p>The last command will prompt your enter your username and password. Simply enter that, our output folder should be pushed to the repo successfully. Now open up browser and enter username.github.io and we can see our blog live on the web.</p>
+</div>
+<div class="section" id="github-2-step-authentification">
+<h2>Github 2-step Authentification</h2>
+<p>If you have 2-step Authentification setup on Github account, using the git push command might not work for you as it doesn't implement a way for you to enter the second passcode.</p>
+<p>There are 2 ways to solve this problem, one way is to generate a app hash string passcode from Github and use it while doing git push. It's annoying as we have to keep that somewhere and we need to enter that everytime we perform a push.</p>
+<p>Another easier way is to generate a ssh and put your public key to github.</p>
+</div>
+<div class="section" id="github-ssh-access">
+<h2>Github SSH Access</h2>
+<p>There are many tutorials on how to generate a SSH key pair. A SSH key pair contains a private key and a public key.</p>
+<p>A private key is our personal key and we should alway keep secret. A public key is like a lock that matches our private key. When we need to access some machine remotely, we give public key to remote mahine manager and he can install it to his machine. It's like installing our lock onto his house's front door (in this case, his house would be the machine). So we can get into his house with our prviate key. And of course, he can setup locks that comes from other people, ie his door can have many locks and each lock can open his door.</p>
+<p>If you are using a linux machine, a quick way to generate a key pair is to use ssh-keygen.</p>
+<div class="highlight"><pre><span></span>ssh-keygen -t rsa -C <span class="s2">&quot;your_email@example.com&quot;</span>
+</pre></div>
+<p>This will generate two files, id_rsa, and id_rsa.pub. Open id_rsa.pub with any text editor and copy its entire content.</p>
+<p>Now let's put this public key to our Github account so that we can use our private key to access Github.</p>
+<p>In <a class="reference external" href="https://github.com/settings/keys">https://github.com/settings/keys</a>, we have a section to add new public key. Paste everything from public key into &quot;Key&quot; section and name &quot;title&quot; to &quot;mySSHKey&quot;. And click on add SSH key. We should be good to go.</p>
+<p>Next time when we do a git push, it should stop asking us about our password.</p>
+</div>
+<div class="section" id="streamline-with-a-script">
+<h2>Streamline With A Script</h2>
+<p>We can stream line the publishing process with a bash script. Let's first go to our project root folder and create a file called pubish.</p>
+<div class="highlight"><pre><span></span>touch publish
+</pre></div>
+<p>In this file, let's enter the following content</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+pelican content -o output -s pelicanconf.py
+ghp-import output
+git push git@github.com:username/username.github.io.git gh-pages:master
+</pre></div>
+<p>Making this file executable:</p>
+<div class="highlight"><pre><span></span>chmod +x publish
+</pre></div>
+<p>We just created a script to perform the publishing process for us. To publish new content, simply enter this command under project root directory.</p>
+<div class="highlight"><pre><span></span>./publish
+</pre></div>
+<p>It should perform all the task for us.</p>
+</div>
+
+        </div>
+        <div class="post_list">
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://hazelement.github.io/setup-pelican-for-github-user-pages.html&text=Setup Pelican for Github User Pages&via="><img src="https://hazelement.github.io/theme/images/icons/twitter-s.png"></a></span>
+
+                <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://hazelement.github.io/setup-pelican-for-github-user-pages.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://hazelement.github.io/theme/images/icons/google-s.png"></a></span>
+
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://hazelement.github.io/setup-pelican-for-github-user-pages.html&t=Setup Pelican for Github User Pages"><img src="https://hazelement.github.io/theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://hazelement.github.io/setup-pelican-for-github-user-pages.html&title=Setup Pelican for Github User Pages" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://hazelement.github.io/theme/images/icons/linkedin-s.png"></a>
+
+                <span class="mail"><a href="mailto:?subject=Setup Pelican for Github User Pages&amp;body=Check out this article from Haze. https://hazelement.github.io/setup-pelican-for-github-user-pages.html" title="Share by Email" target="_blank"><img src="https://hazelement.github.io/theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+        <div class="comments">
+            <h2>Comments</h2>
+            
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            var disqus_identifier = "setup-pelican-for-github-user-pages.html";
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//https-hazelement-github-io.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </article>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Blog powered by <a href="http://getpelican.com/">Pelican</a>, 
+      which takes great advantage of <a href="http://python.org">Python</a>.
+      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a href="https://parbhatpuri.com/">@parbhat</a>.
+    </p>
+  </footer>
+
+
+</body>
+</html>
