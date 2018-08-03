@@ -1,9 +1,11 @@
 RSTSample
 ##############
 
-:date: 2010-10-03 10:20
-:modified: 2010-10-04 18:40
-:tags: thats, awesome
-:category: yeah
-:authors: Alexis Metaireau, Conan Doyle
-:summary: Short version for index and feeds
+:date: 2018-08-03
+:modified: 2018-08-03
+:tags: example, rst, pelican, publishing
+:category: example
+:authors: Harry Zheng
+:summary: Example for rst based file
+
+This is another post from rst file.
