@@ -74,7 +74,7 @@
 
         {% endfor %}
          
-        {% if DISPLAY_PAGES_ON_MENU and PAGES %}{% for p in pages %}
+        {% if DISPLAY_PAGES_ON_MENU and pages %}{% for p in pages %}
           {% if(page==p) %}
             <li><a class="nav__link__on" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
           {% else %}
