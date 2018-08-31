@@ -87,7 +87,7 @@ Figure out what major version our Ubuntu we have,
 
 .. code-block:: bash
 
-uname -a
+    uname -a
 
 This will give out something like this. 
 
