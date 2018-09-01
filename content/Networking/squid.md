@@ -20,7 +20,7 @@ In this project, we will explorer setting up a non-transparent proxy server usin
 
 # Squid docker
 
-A popular proxy software. http://www.squid-cache.org/. The `Dockerfile` is created and the content is as followed.
+A popular proxy software, [link](http://www.squid-cache.org/). The `Dockerfile` is created and the content is as followed.
 
 
 ```
@@ -29,10 +29,6 @@ FROM ubuntu:18.04
 ENV SQUID_VERSION=3.5.27 \
     SQUID_DIR=/usr/local/squid \
     SQUID_USER=proxy
-#
-#RUN apt-get update \
-# && DEBIAN_FRONTEND=noninteractive apt-get install -y squid=${SQUID_VERSION}* \
-# && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update
 RUN apt-get install build-essential openssl libssl1.0-dev wget -y
@@ -253,11 +249,7 @@ squid_1  | 2018/09/01 02:33:40| storeLateRelease: released 0 objects
 
 # Client setup
 
-On client machine, install the server certificate `ca.crt` as Trusted Root Certification Authorities. 
-
-On Windows and Linux, https://success.outsystems.com/Support/Enterprise_Customers/Installation/Install_a_trusted_root_CA__or_self-signed_certificate. 
-
-On Mac, https://pubs.vmware.com/flex-1/index.jsp?topic=%2Fcom.vmware.horizon.flex.admin.doc%2FGUID-9201A917-D476-40EF-B1F4-BBF14AB83D94.html.
+On client machine, install the server certificate `ca.crt` as Trusted Root Certification Authorities, refer to [Windows and Linux](https://success.outsystems.com/Support/Enterprise_Customers/Installation/Install_a_trusted_root_CA__or_self-signed_certificate), and [Mac](https://pubs.vmware.com/flex-1/index.jsp?topic=%2Fcom.vmware.horizon.flex.admin.doc%2FGUID-9201A917-D476-40EF-B1F4-BBF14AB83D94.html).
 
 Configure the proxy setting on your machine to ip `localhost` and port `8888`. If the client is on a different machine, you need to open port `8888` on the server side and configure client to the server's ip and port `8888`. 
 
