@@ -6,9 +6,6 @@ Tags: squid, proxy, http, https, ssl, docker
 Authors: Finite Elemente
 Summary: deploy non-transparent squid in docker for network monitoring and filtering 
 
-# TODO
-1. fix title formatting on website, markdown seems to have differernt styling than RST
-
 We are looking to create a non-transparent proxy server using Squid for networking sniffing. The end product should be able to sniff both HTTP and HTTPS traffic. 
 
 # Transparent proxy server vs non-transparent proxy server
