@@ -14,7 +14,7 @@ Both types proxy servers are able to relay traffic from client machine. Transpar
 
 The down side of a transparent proxy is that it provides limited function to perform network traffic monitoring and filtering. Only HTTP traffic can be monitored. 
 
-A non-transparent proxy on the other hand, provides a much more powerful and flexiable proxying service. It can relay HTTPS traffic as a man-in-the-middle proxy by forging its own SSL certificate. However, in order to achive this, server's CA certificate must be installed and trusted as a root certificate on client's machine. 
+A non-transparent proxy on the other hand, provides a much more powerful and flexible proxying service. It can relay HTTPS traffic as a man-in-the-middle proxy by forging its own SSL certificate. However, in order to achieve this, server's CA certificate must be installed and trusted as a root certificate on client's machine. 
 
 In this project, we will explorer setting up a non-transparent proxy server using squid and containerize it into a docker. This container can later be used with an ICAP service to perform network traffic filtering in the future. 
 
@@ -253,6 +253,6 @@ On client machine, install the server certificate `ca.crt` as Trusted Root Certi
 
 Configure the proxy setting on your machine to ip `localhost` and port `8888`. If the client is on a different machine, you need to open port `8888` on the server side and configure client to the server's ip and port `8888`. 
 
-Once everything configured, go to google.ca and check its SSL certificate, the certificate should say its issued by XXXXX instead of Google. But all certificate encryption and signiture should be valid as we have trusted our own CA certificate on the client machine. 
+Once everything configured, go to google.ca and check its SSL certificate, the certificate should say its issued by XXXXX instead of Google. But all certificate encryption and signature should be valid as we have trusted our own CA certificate on the client machine. 
 
 
