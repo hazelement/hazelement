@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Haze'
-SITENAME = u'On Coding'
-SIDEBAR_DIGEST = u'Haze Element'
+SITENAME = u'Haze Element'
+SIDEBAR_DIGEST = u">>> hello world"
 SITEURL = 'https://hazelement.github.io/'
 # SITEURL = 'http://localhost:8000'
 
