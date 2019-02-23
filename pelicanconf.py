@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Haze'
 SITENAME = u'Haze Element'
-SIDEBAR_DIGEST = u">>> hello world"
+SIDEBAR_DIGEST = u""
 SITEURL = 'https://hazelement.github.io/'
 # SITEURL = 'http://localhost:8000'
 
