@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-##
+#!/usr/bin/env
 # This section should match your Makefile
 ##
 PY=${PY:-python}
