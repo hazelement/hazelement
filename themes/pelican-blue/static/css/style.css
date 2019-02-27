@@ -115,6 +115,15 @@ a:hover { text-decoration: underline; }
 .highlight pre {
   font-size: 14px;
   overflow: scroll;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f36d33;
+  page-break-inside: avoid;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
 }
 
 /* inline code */
