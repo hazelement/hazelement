@@ -7,7 +7,7 @@ Summary: Typical workflow for a kubernetes cluster deployment
 
 This article summarizes the basic workflow when working with a kubernetes cluster
 
-## Basic deployment
+# Basic deployment
 
 ## Run a node
 
