@@ -7,9 +7,9 @@ Summary: Typical workflow for a kubernetes cluster deployment
 
 This article summarizes the basic workflow when working with a kubernetes cluster
 
-# Basic deployment
+## Basic deployment
 
-## Run a node
+### Run a node
 
 To run the node using a an image, run this command 
 
@@ -25,7 +25,7 @@ kubectl get deployments hello-world
 kubectl describe deployments hello-world
 ```
 
-## Use a service to expose the deployment
+### Use a service to expose the deployment
 
 Create a service to expose the `Deployment`:
 
@@ -47,7 +47,7 @@ curl http://<external-ip>:<port>
 Hello Kubernetes!
 ```
 
-# Scale deployment
+## Scale deployment
 
 To change the number of replicas in the deployment object. use this command:
 ```
@@ -70,7 +70,7 @@ hello-world-5b446dd74b-vrm4r   1/1       Running   0          16m
 
 `hello-world` is the pod we are running and it's a `Deployment`, hence `deployments/hello-world`
 
-# Delete service and deployment
+## Delete service and deployment
 
 To delete the Service, enter this command:
 ```
