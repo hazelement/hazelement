@@ -9,7 +9,7 @@ This article summarizes the basic workflow when working with a kubernetes cluste
 
 ## Basic deployment
 
-### Run a node
+## Run a node
 
 To run the node using a an image, run this command 
 
@@ -47,7 +47,7 @@ curl http://<external-ip>:<port>
 Hello Kubernetes!
 ```
 
-# Change deployment replica
+# Scale deployment
 
 To change the number of replicas in the deployment object. use this command:
 ```
@@ -70,6 +70,13 @@ hello-world-5b446dd74b-vrm4r   1/1       Running   0          16m
 
 `hello-world` is the pod we are running and it's a `Deployment`, hence `deployments/hello-world`
 
+# Delete service and deployment
 
-
-
+To delete the Service, enter this command:
+```
+kubectl delete services my-service
+```
+To delete the Deployment, the ReplicaSet, and the Pods that are running the Hello World application, enter this command:
+```
+kubectl delete deployment hello-world
+```
