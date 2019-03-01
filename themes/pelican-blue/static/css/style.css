@@ -5,8 +5,14 @@ html {
 }
 
 /* Titles */
-h1 { text-transform: uppercase }
-h1, h2 { 
+h1 { 
+  font-size: 2.5em;
+  text-transform: uppercase 
+  margin-bottom: 30px;
+  margin-top: 10px;
+  font-weight: normal; 
+}
+h2 { 
 	font-weight: normal; 
   margin-top: 10px;
   margin-bottom: 10px;
