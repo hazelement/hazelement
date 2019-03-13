@@ -5,7 +5,7 @@ Tags: Kubernetes, CI/CD
 Authors: Harry Zheng
 Summary: Deploy a Kubernetes stateless application
 
-This article is a summary of the tutorial at `https://kubernetes.io/docs/tutorials/stateless-application/guestbook/`. It utilizes manifest file to create deployments and services. 
+This article is a summary of the [tutorial](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/). It utilizes manifest file to create deployments and services. 
 
 A stateless application doesn't save its data to hard drive, thus every time the application is restarted. It returns back to its original state. 
 
