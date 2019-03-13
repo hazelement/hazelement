@@ -1,9 +1,9 @@
 Title: Kubernetes Stateless Application
-Date: 2019-03-01
-Modified: 2019-03-03
+Date: 2019-03-13
+Modified: 2019-03-13
 Tags: Kubernetes, CI/CD
 Authors: Harry Zheng
-Summary: Typical workflow for a kubernetes cluster deployment
+Summary: Deploy a Kubernetes stateless application
 
 This article is a summary of the tutorial at `https://kubernetes.io/docs/tutorials/stateless-application/guestbook/`. It utilizes manifest file to create deployments and services. 
 
