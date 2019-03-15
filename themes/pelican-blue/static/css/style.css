@@ -68,7 +68,7 @@ body > article, footer {
   line-height: 1.6em;
   display: block;
   max-width: 700px;
-  margin: 40px auto auto 355px;
+  margin: 40px auto auto 280px;
   padding: 20px 80px 10px;
 }
 
@@ -149,7 +149,6 @@ aside {
   color: white;
   box-shadow: 0 0 3px black;
   text-align: center;
-  padding-top: 8%;
   background-size: cover;
 }
 

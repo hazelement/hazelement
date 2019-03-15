@@ -11,3 +11,9 @@ Source code for https://github.com/hazelement/hazelement.github.io
 
 ## Publish
 To publish and update the website. Create a python virtual environment with libraries in `requirements.txt`. With virtual environment activated, run the `publish.sh` script. This should compile the website with new articles and push it to GitHub. 
+
+## Local dev
+
+Make sure `pelican` virtualenv is activated. Use `make serve` to start a local server at port `8000`. To enable page regeneration upon changes, run `make regenerate` on a seperate window. 
+
+To to more help, `make help`. 
