@@ -50,7 +50,7 @@ DEFAULT_PAGINATION = 10
 SUMMARY_MAX_LENGTH = 50
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 THEME = "themes/pelican-blue"
 # THEME = "simple"
@@ -64,7 +64,7 @@ IDEBAR_DIGEST = 'Programmer and Web Developer'
 
 FAVICON = '/favicon.ico'
 
-MENUITEMS = (('Home', SITEURL),)
+MENUITEMS = (('Home', '/'),)
 
 # Display pages list on the top menu
 DISPLAY_PAGES_ON_MENU = True
