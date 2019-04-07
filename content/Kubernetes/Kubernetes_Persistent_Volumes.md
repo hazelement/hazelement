@@ -233,21 +233,9 @@ Check `localhost` on the browser and a WordPress page should show up.
 
 ## Cleaning up
 
-1. Run the following command to delete Secret, 
-```
-kubectl delete secret mysql-pass
-```
-
-2. Run following command to delete all Deployments and Services,
-```
-kubectl delete deployment -l app=wordpress
-kubectl delete service -l app=wordpress
-```
-
-3. Run the following commands to delete the PersistentVolumeClaims. 
-```
-kubectl delete pvc -l app=wordpress
-```
+1. Run the following command to delete Secret, `kubectl delete secret mysql-pass`
+2. Run following command to delete all Deployments and Services, `kubectl delete deployment -l app=wordpress; kubectl delete service -l app=wordpress`
+3. Run the following commands to delete the PersistentVolumeClaims. `kubectl delete pvc -l app=wordpress`
 
 
 
