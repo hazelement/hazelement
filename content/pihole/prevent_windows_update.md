@@ -12,7 +12,7 @@ For those who haven't heard about Pihole, it's a light DNS service that can run 
 
 ## Running a Pihole in docker
 
-We will be using docker to run a pihole service. Pihole has an official docker image that can be found [here](https://github.com/pi-hole/docker-pi-hole). A `docker-compose` file is also provided on their GitHub page. It's posted here for convenience. 
+We will be using docker to run a Pihole service. Pihole has an official docker image that can be found [here](https://github.com/pi-hole/docker-pi-hole). A `docker-compose` file is also provided on their GitHub page. It's posted here for convenience. 
 
 ```
 version: "3"
@@ -45,28 +45,28 @@ services:
     restart: unless-stopped
 ```
 
-Let's assume `pinhole` is running on a local server with IP address `192.168.0.254`. On web browser, go to that IP address. A pihole page should show up. Click on `Did you mean to go to the admin panel?`. This will bring us to the admin page. Click on `login in` and enter the password defined in the `docker-compose.yml` file. 
+Let's assume `Pihole` is running on a local server with IP address `192.168.0.254`. On web browser, go to that IP address. A pihole page should show up. Click on `Did you mean to go to the admin panel?`. This will bring us to the admin page. Click on `login in` and enter the password defined in the `docker-compose.yml` file. 
 
 ![Pihole admin](../images/pihole_1.png)
 
-## Configure pihole to block Windows 10 update server
+## Configure Pihole to block Windows 10 update server
 
-Pihole's blocking mechanism are based on blacklist and whitelist. Navigate to `Setting > Blocklists`. Here you can add as many lists as you want. There are many community list out there that block different type of services. 
+Pihole's blocking mechanism are based on blacklist and whitelist. Navigate to `Setting > Blocklists`. Here you can add as many lists as you want. There are many community list out there that block different types of services. 
 
-![Pihole admin](../images/pihole_2.png)
+![Pihole admin setting](../images/pihole_2.png)
 
 You can see I have a lot of them added. At the bottom of the list, we can see a place where we can add more lists. 
 
-![Pihole admin](../images/pihole_3.png)
+![Pihole admin setting block](../images/pihole_3.png)
 
 The URL we are using is from [here](https://www.stadtmarketing-freifunk.de/WinUpdate.txt). Many thanks to krathalan and in2016minewastaken from reddit. Enter the url and click on `Save and Update` to update the rules, 
 
-## Configure Windows to use the pihole as DNS server
+## Configure Windows to use the Pihole as DNS server
 
 There are 2 options here. Configure specific machines we would like to prevent auto update or apply this on all Windows 10 machines on the local network. 
 
 1. To configure specific machines, just configure the DNS server on each machine to `192.168.0.254`. 
-2. To configure for all machines on the local network, on the router, configure it's DNS server to `192.168.0.254`.
+2. To configure for all machines on the local network, configure router's DNS server to `192.168.0.254`. Refer to your router manual to setup this. 
 
 And that's it! Next time Windows machines try to get an update, it will hit a wall at our DNS server and fail. 
 
