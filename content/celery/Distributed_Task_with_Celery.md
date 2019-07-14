@@ -10,7 +10,11 @@ This article discusses code base setup and typical worker Nodes configurations f
 
 ## Introduction
 
-[x] draw celery worker stack graph
+Celery is a asynchronous task queue/job queue system that facilitates communications between Producer system and Consumer system. A typical setup can be shown as below. 
+
+![Pelican](../images/celery_setup.svg)
+
+An advantage of this setup is that it enables separation of heavy loading operation from rest of application layers. It's easier to maintain and perform updates without affecting the entire system, essentially decouples system components.
 
 ## Challenges
 
@@ -160,6 +164,7 @@ def create_worker_from(WorkerClass, celery_config='celery_tasks.celery_config'):
 In producer and consumer, we use this method and task class to create celery app and worker class instances for each task. Worker class instances are used to produce and consume tasks. 
 
 For example, in consumer, 
+
 ```
 from celery_tasks.tasks import MagicCeleryTask
 from celery_tasks.utils import create_worker_from
@@ -197,11 +202,3 @@ result = worker.delay(1,2,3).get()
 
 ```
 
-## Worker node setup
-
-Discuss docker and firewall configurations to allow connect from docker to host
-
-## Future thoughts
-
-
-TBD
