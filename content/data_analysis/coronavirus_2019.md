@@ -67,6 +67,11 @@ Interesting spots:
 * Given Wuhan's data, we can say it will take 2 weeks of lock down to slow down the transmission and another 2 weeks to contain the spread. If lock down stops within this 4 weeks. The effort will be gone and we may see the virus start spreading again. 
 * Italy started national lock down on day 20. We shall see how this pan out according to discovery above. 
 
+Important call out:
+
+* Controlling the spread using lockdown is important as it eases the load our health system. 
+* It will take 4 weeks for lockdown to effectively decrease cases. That is if the healthy care system is currently under load or over loaded and we start the lockdown right now. The situation in our medical system will not improve until 4 weeks later. 
+
 
 # References
 
