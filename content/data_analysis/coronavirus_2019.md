@@ -6,7 +6,7 @@ Authors: Harry Zheng
 Summary: Analysis on current coronavirus situation. 
 
 
-## Country to country comparision
+# Country to country comparison
 
 Here we put several country together and highlight significant events happened in each country. 
 
@@ -66,3 +66,17 @@ Interesting spots:
 * After China's Wuhan lock down. It takes 4 weeks for the virus to calm down. Given virus takes 2 weeks to show symptom on average. We can probably say the transmission slows down after 2 weeks of lock down. 
 * Given Wuhan's data, we can say it will take 2 weeks of lock down to slow down the transmission and another 2 weeks to contain the spread. If lock down stops within this 4 weeks. The effort will be gone and we may see the virus start spreading again. 
 * Italy started national lock down on day 20. We shall see how this pan out according to discovery above. 
+
+
+# References
+
+## Virus data
+* [WHO Coronavirus full data](https://covid.ourworldindata.org/data/full_data.csv)
+
+## Timeline events
+
+* [South Korea](https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_South_Korea#Timeline)
+* [Singapore](https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Singapore)
+* [Italy](https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy)
+* [NYTimes](https://www.nytimes.com/article/coronavirus-timeline.html)
+* [Coronavirus pandemic](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_coronavirus_pandemic)
