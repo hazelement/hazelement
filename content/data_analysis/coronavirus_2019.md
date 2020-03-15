@@ -1,7 +1,7 @@
 Title: Coronavirus 2019 Analysis
 Date: 2020-03-15
 Modified: 2020-03-15
-Tags: Data Analysis, matplot, Coronavirus
+Tags: Data Analysis, Coronavirus
 Authors: Harry Zheng
 Summary: Analysis on current coronavirus situation. 
 
