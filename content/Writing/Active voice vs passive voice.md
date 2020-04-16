@@ -147,7 +147,7 @@ Many sentences contain multiple verbs, some of which are active and some of whic
           (Code) is acted on (is interpreted) by the actor (Python).
           The second half of the sentence (code is compiled by C++) is also in
           passive voice, where the target (code) is acted on (is compiled)
-          by the actor (C++).](https://developers.google.com/tech-writing/one/images/passive-passive.svg)
+          by the actor (C++).](../images/passive-passive.svg)
 
 Here is that same sentence, partially converted to active voice:
 
@@ -157,7 +157,7 @@ Here is that same sentence, partially converted to active voice:
           (Python) acts on (interprets) a target (code). The second half
           of the sentence (code is compiled by C++) is in passive voice,
           where the target (code) is acted on (is compiled) by the
-          actor (C++).](https://developers.google.com/tech-writing/one/images/active-passive.svg)
+          actor (C++).](../images/active-passive.svg)
 
 And here is that same sentence, now fully converted to active voice:
 
@@ -166,7 +166,7 @@ And here is that same sentence, now fully converted to active voice:
           (Python interprets code) is in active voice, where an actor
           (Python) acts on (interprets) a target (code). The second half
           of the sentence (C++ compiles code) is also in active voice,
-          where the actor (C++) acts on (compiles) the target (code).](https://developers.google.com/tech-writing/one/images/all-active.svg)
+          where the actor (C++) acts on (compiles) the target (code).](../images/all-active.svg)
 
 ### Exercise
 

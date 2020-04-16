@@ -15,7 +15,7 @@ Illustrating
 
 Remember when your teacher assigned you a hefty chapter to read? You flipped through the assigned section of the textbook, desperately hoping for...yes, pictures! Viewing illustrations was so much more fun than reading text. In fact, when it comes to reading technical material, the vast majority of adults are still little kids---still yearning for pictures rather than text.
 
-![Three children read a book while pointing at the pictures.](https://developers.google.com/tech-writing/two/images/book_readers.jpg)
+![Three children read a book while pointing at the pictures.](../images/book_readers.jpg)
 
 **Figure 1. Good graphics engage readers in ways that text cannot.**
 
@@ -40,16 +40,16 @@ Target Audience: CS undergraduate students taking an "Introduction to Data Struc
 
 Consider the following three figures, each of which uses the same caption.
 
-![Multicolored chain](https://developers.google.com/tech-writing/two/images/caption_exercise_chain_a.svg)
+![Multicolored chain](../images/caption_exercise_chain_a.svg)
 
 **Caption A. A single-linked list holds content and a pointer to the next node.**
 
-![Four boxes connected by three arrows](https://developers.google.com/tech-writing/two/images/caption_exercise_drawing_b.png)
+![Four boxes connected by three arrows](../images/caption_exercise_drawing_b.png)
 
 **Caption B. A single-linked list holds content and a pointer to the next node.**
 
 ![Four boxes (each with content and a pointer) connected by three
-     arrows.](https://developers.google.com/tech-writing/two/images/caption_exercise_drawing_c.svg)
+     arrows.](../images/caption_exercise_drawing_c.svg)
 
 **Caption C. A single-linked list holds content and a pointer to the next node.**
 
@@ -68,7 +68,7 @@ Constrain the amount of information in a single drawing
 
 Few intellectual tasks can be quite as rewarding as studying a fine painting, gradually uncovering layers of insight and meaning. People pay good money to do exactly that in the world's art museums.
 
-![Portrait of Pere Tanguy By Vincent van Gogh - Musée Rodin, Public Domain, https://commons.wikimedia.org/w/index.php?curid=119599](https://developers.google.com/tech-writing/two/images/van_gogh.png)
+![Portrait of Pere Tanguy By Vincent van Gogh - Musée Rodin, Public Domain, https://commons.wikimedia.org/w/index.php?curid=119599](../images/van_gogh.png)
 
 **Figure 2. You'd happily study this Van Gogh painting.**
 
@@ -76,7 +76,7 @@ Few intellectual tasks can be quite as rewarding as studying a fine painting, gr
 
 By contrast, highly complex technical illustrations like the following tend to discourage most readers:
 
-![A schematic, filled with lines and small print](https://developers.google.com/tech-writing/two/images/overly_complex_diagram.svg)
+![A schematic, filled with lines and small print](../images/overly_complex_diagram.svg)
 
 **Figure 3. Complex block diagrams overwhelm readers.**
 
@@ -84,13 +84,13 @@ Just as you avoid overly-long sentences, strive to avoid visual run-ons. As a ru
 
 The trick to whittling visual clutter into something coherent and helpful is to organize complex systems into subsystems, like those shown in the following figure:
 
-![Three blocks, each with a simple label](https://developers.google.com/tech-writing/two/images/subsystems.svg)
+![Three blocks, each with a simple label](../images/subsystems.svg)
 
 **Figure 4. A complex system organized into three subsystems.**
 
 After showing the "big picture," provide separate illustrations of each subsystem.
 
-![A zoomed in segment of figure 4 with slightly more detail](https://developers.google.com/tech-writing/two/images/subsystems_zoomed.svg)
+![A zoomed in segment of figure 4 with slightly more detail](../images/subsystems_zoomed.svg)
 
 **Figure 5. Expanded detail for one subsystem of a complex system.**
 
@@ -101,13 +101,13 @@ Focus the reader's attention
 
 When confronted with a complex screenshot like the following, readers struggle to determine what's relevant:
 
-![Three blocks, each with a simple label](https://developers.google.com/tech-writing/two/images/unfocused_screenshot.png)
+![Three blocks, each with a simple label](../images/unfocused_screenshot.png)
 
 **Figure 6. Readers don't know what to focus on.**
 
 Adding a visual cue, for example, the red ellipse in the following figure, helps readers focus on the relevant section of the screenshot:
 
-![Same screenshot, but with one menu item circled in red](https://developers.google.com/tech-writing/two/images/focused_screenshot.png)
+![Same screenshot, but with one menu item circled in red](../images/focused_screenshot.png)
 
 **Figure 7. Readers focus on a shape that breaks the pattern.**
 
@@ -115,7 +115,7 @@ Adding a visual cue, for example, the red ellipse in the following figure, helps
 
 In the example image, the callout and arrow quickly direct the reader to the purpose.
 
-![Three blocks, each with a simple label](https://developers.google.com/tech-writing/two/images/moon_with_callout.svg)
+![Three blocks, each with a simple label](../images/moon_with_callout.svg)
 
 **Figure 8. A callout directs readers' eyes.**
 
@@ -133,7 +133,7 @@ As with writing, the first draft of an illustration is seldom good enough. Revis
 
 For instance, consider the [evolution of the London Tube map](https://wikipedia.org/wiki/Tube_map#History). Prior to 1931, the Tube map was drawn to scale, complete with above ground roads and tube lines that curved as the tracks did.
 
-![Complex map of the 1908 London Tube that includes above ground roads](https://developers.google.com/tech-writing/two/images/tube_1908.jpg)
+![Complex map of the 1908 London Tube that includes above ground roads](../images/tube_1908.jpg)
 
 **Figure 9. 1908 to scale map of the London Tube with above ground roads.**
 
@@ -146,7 +146,7 @@ In 1931, Harry Beck revolutionized a new type of public transit map that simplif
 Consider the following original illustration:
 
 ![A complex visual of recursion that uses inaccessible colors and
-          confusing arrows](https://developers.google.com/tech-writing/two/images/recursion1.svg)
+          confusing arrows](../images/recursion1.svg)
 
 **Figure 10. A complex diagram.**
 
@@ -173,7 +173,7 @@ There are also additional issues in the diagram that are not identified here.
 
 Here is an improved illustration:
 
-![Visual of recursion that simplifies colors and adds labels to arrows](https://developers.google.com/tech-writing/two/images/recursion2.svg)
+![Visual of recursion that simplifies colors and adds labels to arrows](../images/recursion2.svg)
 
 **Figure 11. A simplified version of the preceding diagram.**
 
