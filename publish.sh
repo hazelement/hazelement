@@ -1,4 +1,9 @@
 #!/bin/bash
+workon pelican
+git checkout master
+git merge writing
+git push
+
 pelican content -o output -s pelicanconf.py
 ghp-import output -b gh-pages
 
