@@ -1,5 +1,5 @@
 #!/bin/bash
-workon pelican
+source ./pyenv/bin/activate
 git checkout master
 git merge writing
 git push
