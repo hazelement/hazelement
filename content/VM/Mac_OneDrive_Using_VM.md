@@ -81,7 +81,7 @@ We use launchagents to start VM in `headless` mode and connect to the smb share.
 
 ```
 
-Notice it's using `/Users/xxxx/.bin/launch_vm`. We need to create this file
+Notice it's using `/Users/xxxx/.bin/launch_vm`. We need to create this file,
 
 ```
 MACHINE=Windows10
