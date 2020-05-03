@@ -8,9 +8,13 @@ PUBLISHCONF=$(BASEDIR)/pelicanconf.py
 PELICANOPTS=
 
 # executables
-PY?=$(BASEDIR)/pyenv/bin/python
-PELICAN?=$(BASEDIR)/pyenv/bin/pelican
-GHPIMPORT=$(BASEDIR)/pyenv/bin/ghp-import
+# PY?=$(BASEDIR)/pyenv/bin/python
+# PELICAN?=$(BASEDIR)/pyenv/bin/pelican
+# GHPIMPORT=$(BASEDIR)/pyenv/bin/ghp-import
+
+PY?=python
+PELICAN?=pelican
+GHPIMPORT=ghp-import
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -44,9 +48,10 @@ ifeq ($(RELATIVE), 1)
 endif
 
 setpermission:
-	@chmod +x $(PY)
-	@chmod +x $(PELICAN)
-	@chmod +x $(GHPIMPORT)
+	@echo "Setting executables"
+	# @chmod +x $(PY)
+	# @chmod +x $(PELICAN)
+	# @chmod +x $(GHPIMPORT)
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
@@ -98,9 +103,9 @@ endif
 
 devserver: setpermission
 ifdef PORT
-	$(BASEDIR)/develop_server.sh restart $(PORT)
+	$(PY) devserver.py $(CONFFILE) localhost $(PORT)
 else
-	$(BASEDIR)/develop_server.sh restart
+	$(PY) devserver.py $(CONFFILE) localhost 8000
 endif
 
 stopserver: setpermission
