@@ -8,4 +8,4 @@ Summary: This page maintains a list of things to do for this website
 
 
 
-[] Test
+[] `devserver` not detecting changes in `pelicanconf.py`
