@@ -54,14 +54,12 @@ help:
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
 	@echo '   make prepare-dev                    prepare dev environment            '
-	@echo '   make html                           (re)generate the web site          '
 	@echo '   make clean                          remove the generated files         '
+	@echo '   make clean-git                      clean up git article branches      '
+	@echo '   make html                           (re)generate the web site          '
 	@echo '   make regenerate                     regenerate files upon modification '
 	@echo '   make publish                        generate using production settings '
-	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
-	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
-	@echo '   make devserver [PORT=8000]          start/restart develop_server.sh    '
-	@echo '   make stopserver                     stop local server                  '
+	@echo '   make devserver [PORT=8000]          run a auto-regenerate dev server   '
 	@echo '   make ssh_upload                     upload the web site via SSH        '
 	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
 	@echo '   make dropbox_upload                 upload the web site via Dropbox    '
@@ -75,10 +73,13 @@ help:
 	@echo '                                                                          '
 
 
+clean-git:
+	git branch --merged | egrep -v "(^\*|master|dev|writing|theme)" | xargs git branch -d
+
 prepare-dev:
-    brew install python3
-    python3 -m pip install virtualenv
-    make prerequisites
+	brew install python3
+	python3 -m pip install virtualenv
+	make prerequisites
 
 prerequisites: $(VENV_NAME)/bin/activate
 
@@ -93,24 +94,10 @@ html: prerequisites
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	rm -rf $(VENV_NAME)
 
 regenerate: prerequisites
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-
-serve: prerequisites
-ifdef PORT
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
-else
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server
-endif
-
-serve-global: prerequisites
-ifdef SERVER
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 $(SERVER)
-else
-	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 0.0.0.0
-endif
-
 
 devserver: prerequisites
 ifdef PORT
@@ -118,10 +105,6 @@ ifdef PORT
 else
 	$(PY) devserver.py $(CONFFILE) localhost 8000
 endif
-
-stopserver: prerequisites
-	$(BASEDIR)/develop_server.sh stop
-	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
@@ -148,4 +131,4 @@ github: publish
 	${GHPIMPORT} ${OUTPUTDIR} -b ${GITHUB_STAGING_BRANCH}
 	git push ${GITHUB_PAGES_REPO} ${GITHUB_STAGING_BRANCH}:${GITHUB_PAGES_BRANCH} -f
 
-.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github prerequisites
+.PHONY: html help clean regenerate devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github prerequisites clean-git prepare-dev
