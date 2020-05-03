@@ -4,6 +4,7 @@ docutils==0.16
 feedgenerator==1.9.1
 ghp-import==0.5.5
 Jinja2==2.11.2
+livereload==2.6.1
 Markdown==3.2.1
 MarkupSafe==1.1.1
 pelican==3.7.1
@@ -11,4 +12,5 @@ Pygments==2.6.1
 python-dateutil==2.8.1
 pytz==2019.3
 six==1.14.0
+tornado==6.0.4
 Unidecode==1.1.1
