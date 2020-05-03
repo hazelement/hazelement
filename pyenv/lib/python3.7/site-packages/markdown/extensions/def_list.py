@@ -11,15 +11,13 @@ Original code Copyright 2008 [Waylan Limberg](http://achinghead.com)
 
 All changes Copyright 2008-2014 The Python Markdown Project
 
-License: [BSD](http://www.opensource.org/licenses/bsd-license.php)
+License: [BSD](https://opensource.org/licenses/bsd-license.php)
 
 """
 
-from __future__ import absolute_import
-from __future__ import unicode_literals
 from . import Extension
 from ..blockprocessors import BlockProcessor, ListIndentProcessor
-from ..util import etree
+import xml.etree.ElementTree as etree
 import re
 
 
@@ -45,13 +43,13 @@ class DefListProcessor(BlockProcessor):
         else:
             d, theRest = self.detab(block)
         if d:
-            d = '%s\n%s' % (m.group(2), d)
+            d = '{}\n{}'.format(m.group(2), d)
         else:
             d = m.group(2)
         sibling = self.lastChild(parent)
         if not terms and sibling is None:
             # This is not a definition item. Most likely a paragraph that
-            # starts with a colon at the begining of a document or list.
+            # starts with a colon at the beginning of a document or list.
             blocks.insert(0, raw_block)
             return False
         if not terms and sibling.tag == 'p':
@@ -59,7 +57,7 @@ class DefListProcessor(BlockProcessor):
             state = 'looselist'
             terms = sibling.text.split('\n')
             parent.remove(sibling)
-            # Aquire new sibling
+            # Acquire new sibling
             sibling = self.lastChild(parent)
         else:
             state = 'list'
@@ -101,15 +99,11 @@ class DefListIndentProcessor(ListIndentProcessor):
 class DefListExtension(Extension):
     """ Add definition lists to Markdown. """
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         """ Add an instance of DefListProcessor to BlockParser. """
-        md.parser.blockprocessors.add('defindent',
-                                      DefListIndentProcessor(md.parser),
-                                      '>indent')
-        md.parser.blockprocessors.add('deflist',
-                                      DefListProcessor(md.parser),
-                                      '>ulist')
+        md.parser.blockprocessors.register(DefListIndentProcessor(md.parser), 'defindent', 85)
+        md.parser.blockprocessors.register(DefListProcessor(md.parser), 'deflist', 25)
 
 
-def makeExtension(*args, **kwargs):
-    return DefListExtension(*args, **kwargs)
+def makeExtension(**kwargs):  # pragma: no cover
+    return DefListExtension(**kwargs)

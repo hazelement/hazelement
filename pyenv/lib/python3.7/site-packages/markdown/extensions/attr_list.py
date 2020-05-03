@@ -13,22 +13,13 @@ Original code Copyright 2011 [Waylan Limberg](http://achinghead.com/).
 
 All changes Copyright 2011-2014 The Python Markdown Project
 
-License: [BSD](http://www.opensource.org/licenses/bsd-license.php)
+License: [BSD](https://opensource.org/licenses/bsd-license.php)
 
 """
 
-from __future__ import absolute_import
-from __future__ import unicode_literals
 from . import Extension
 from ..treeprocessors import Treeprocessor
-from ..util import isBlockLevel
 import re
-
-try:
-    Scanner = re.Scanner
-except AttributeError:  # pragma: no cover
-    # must be on Python 2.4
-    from sre import Scanner
 
 
 def _handle_double_quote(s, t):
@@ -53,7 +44,7 @@ def _handle_word(s, t):
     return t, t
 
 
-_scanner = Scanner([
+_scanner = re.Scanner([
     (r'[^ =]+=".*?"', _handle_double_quote),
     (r"[^ =]+='.*?'", _handle_single_quote),
     (r'[^ =]+=[^ =]+', _handle_key_value),
@@ -85,7 +76,7 @@ class AttrListTreeprocessor(Treeprocessor):
 
     def run(self, doc):
         for elem in doc.iter():
-            if isBlockLevel(elem.tag):
+            if self.md.is_block_level(elem.tag):
                 # Block level: check for attrs on last line of text
                 RE = self.BLOCK_RE
                 if isheader(elem) or elem.tag == 'dt':
@@ -152,7 +143,7 @@ class AttrListTreeprocessor(Treeprocessor):
                 # add to class
                 cls = elem.get('class')
                 if cls:
-                    elem.set('class', '%s %s' % (cls, v))
+                    elem.set('class', '{} {}'.format(cls, v))
                 else:
                     elem.set('class', v)
             else:
@@ -162,17 +153,15 @@ class AttrListTreeprocessor(Treeprocessor):
     def sanitize_name(self, name):
         """
         Sanitize name as 'an XML Name, minus the ":"'.
-        See http://www.w3.org/TR/REC-xml-names/#NT-NCName
+        See https://www.w3.org/TR/REC-xml-names/#NT-NCName
         """
         return self.NAME_RE.sub('_', name)
 
 
 class AttrListExtension(Extension):
-    def extendMarkdown(self, md, md_globals):
-        md.treeprocessors.add(
-            'attr_list', AttrListTreeprocessor(md), '>prettify'
-        )
+    def extendMarkdown(self, md):
+        md.treeprocessors.register(AttrListTreeprocessor(md), 'attr_list', 8)
 
 
-def makeExtension(*args, **kwargs):
-    return AttrListExtension(*args, **kwargs)
+def makeExtension(**kwargs):  # pragma: no cover
+    return AttrListExtension(**kwargs)

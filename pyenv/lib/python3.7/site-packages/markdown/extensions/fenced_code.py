@@ -12,11 +12,9 @@ Original code Copyright 2007-2008 [Waylan Limberg](http://achinghead.com/).
 
 All changes Copyright 2008-2014 The Python Markdown Project
 
-License: [BSD](http://www.opensource.org/licenses/bsd-license.php)
+License: [BSD](https://opensource.org/licenses/bsd-license.php)
 """
 
-from __future__ import absolute_import
-from __future__ import unicode_literals
 from . import Extension
 from ..preprocessors import Preprocessor
 from .codehilite import CodeHilite, CodeHiliteExtension, parse_hl_lines
@@ -25,13 +23,11 @@ import re
 
 class FencedCodeExtension(Extension):
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         """ Add FencedBlockPreprocessor to the Markdown instance. """
         md.registerExtension(self)
 
-        md.preprocessors.add('fenced_code_block',
-                             FencedBlockPreprocessor(md),
-                             ">normalize_whitespace")
+        md.preprocessors.register(FencedBlockPreprocessor(md), 'fenced_code_block', 25)
 
 
 class FencedBlockPreprocessor(Preprocessor):
@@ -47,7 +43,7 @@ class FencedBlockPreprocessor(Preprocessor):
     LANG_TAG = ' class="%s"'
 
     def __init__(self, md):
-        super(FencedBlockPreprocessor, self).__init__(md)
+        super().__init__(md)
 
         self.checked_for_codehilite = False
         self.codehilite_conf = {}
@@ -57,7 +53,7 @@ class FencedBlockPreprocessor(Preprocessor):
 
         # Check for code hilite extension
         if not self.checked_for_codehilite:
-            for ext in self.markdown.registeredExtensions:
+            for ext in self.md.registeredExtensions:
                 if isinstance(ext, CodeHiliteExtension):
                     self.codehilite_conf = ext.config
                     break
@@ -92,10 +88,10 @@ class FencedBlockPreprocessor(Preprocessor):
                     code = self.CODE_WRAP % (lang,
                                              self._escape(m.group('code')))
 
-                placeholder = self.markdown.htmlStash.store(code, safe=True)
-                text = '%s\n%s\n%s' % (text[:m.start()],
-                                       placeholder,
-                                       text[m.end():])
+                placeholder = self.md.htmlStash.store(code)
+                text = '{}\n{}\n{}'.format(text[:m.start()],
+                                           placeholder,
+                                           text[m.end():])
             else:
                 break
         return text.split("\n")
@@ -109,5 +105,5 @@ class FencedBlockPreprocessor(Preprocessor):
         return txt
 
 
-def makeExtension(*args, **kwargs):
-    return FencedCodeExtension(*args, **kwargs)
+def makeExtension(**kwargs):  # pragma: no cover
+    return FencedCodeExtension(**kwargs)

@@ -12,9 +12,10 @@ PELICANOPTS=
 # PELICAN?=$(BASEDIR)/pyenv/bin/pelican
 # GHPIMPORT=$(BASEDIR)/pyenv/bin/ghp-import
 
-PY?=python
-PELICAN?=pelican
-GHPIMPORT=ghp-import
+VENV_NAME?=pyenv
+PY?=$(BASEDIR)/$(VENV_NAME)/bin/python
+PELICAN?=$(BASEDIR)/$(VENV_NAME)/bin/pelican
+GHPIMPORT=$(BASEDIR)/$(VENV_NAME)/bin/ghp-import
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -47,16 +48,12 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
-setpermission:
-	@echo "Setting executables"
-	# @chmod +x $(PY)
-	# @chmod +x $(PELICAN)
-	# @chmod +x $(GHPIMPORT)
 
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
+	@echo '   make prepare-dev                    prepare dev environment            '
 	@echo '   make html                           (re)generate the web site          '
 	@echo '   make clean                          remove the generated files         '
 	@echo '   make regenerate                     regenerate files upon modification '
@@ -77,23 +74,37 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-html: setpermission
+
+prepare-dev:
+    brew install python3
+    python3 -m pip install virtualenv
+    make prerequisites
+
+prerequisites: $(VENV_NAME)/bin/activate
+
+$(VENV_NAME)/bin/activate: requirements.txt
+	test -d $(VENV_NAME) || virtualenv -p python3 $(VENV_NAME)
+	${PY} -m pip install -U pip
+	$(PY) -m pip install -r requirements.txt
+	touch $(VENV_NAME)/bin/activate
+
+html: prerequisites
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
-regenerate: setpermission
+regenerate: prerequisites
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-serve: setpermission
+serve: prerequisites
 ifdef PORT
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
 else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server
 endif
 
-serve-global: setpermission
+serve-global: prerequisites
 ifdef SERVER
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 $(SERVER)
 else
@@ -101,14 +112,14 @@ else
 endif
 
 
-devserver: setpermission
+devserver: prerequisites
 ifdef PORT
 	$(PY) devserver.py $(CONFFILE) localhost $(PORT)
 else
 	$(PY) devserver.py $(CONFFILE) localhost 8000
 endif
 
-stopserver: setpermission
+stopserver: prerequisites
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
@@ -137,4 +148,4 @@ github: publish
 	${GHPIMPORT} ${OUTPUTDIR} -b ${GITHUB_STAGING_BRANCH}
 	git push ${GITHUB_PAGES_REPO} ${GITHUB_STAGING_BRANCH}:${GITHUB_PAGES_BRANCH} -f
 
-.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
+.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github prerequisites

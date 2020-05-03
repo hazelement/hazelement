@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='/Users/harryzheng/.virtualenvs/pelican'
+VIRTUAL_ENV='/Users/harryzheng/Downloads/hazelement/pyenv'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
