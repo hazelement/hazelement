@@ -18,8 +18,8 @@ Install Windows 10 on VM in MacOS and sync OneDrive from Windows. Setup a file s
 
 User story:
 
-1. As a user, I want to be able to access OneDrive folder on my Windows 10 VM from MacOS
-2. As a user, I want the OneDrive folder to be functioning and available me when I boot into MacOS
+1. As a user, I want to be able to access OneDrive folder on my Windows 10 VM from MacOS.
+2. As a user, I want the OneDrive folder to be functioning and available me when I boot into MacOS.
 
 ### Related Work
 
