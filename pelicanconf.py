@@ -52,7 +52,8 @@ SUMMARY_MAX_LENGTH = 50
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-THEME = "themes/pelican-blue"
+# THEME = "themes/pelican-blue"
+THEME = "themes/elegant"
 # THEME = "simple"
 
 # Following items are often useful when publishing

@@ -1,12 +1,15 @@
-PY?=python
-PELICAN?=pelican
-PELICANOPTS=
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
-PUBLISHCONF=$(BASEDIR)/publishconf.py
+PUBLISHCONF=$(BASEDIR)/pelicanconf.py
+# PUBLISHCONF=$(BASEDIR)/publishconf.py
+
+PY?=$(BASEDIR)/pyenv/bin/python
+PELICAN?=$(BASEDIR)/pyenv/bin/pelican
+PELICANOPTS=
+GHPIMPORT=$(BASEDIR)/pyenv/bin/ghp-import
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -25,7 +28,9 @@ CLOUDFILES_CONTAINER=my_cloudfiles_container
 
 DROPBOX_DIR=~/Dropbox/Public/
 
-GITHUB_PAGES_BRANCH=gh-pages
+GITHUB_STAGING_BRANCH=gh-pages
+GITHUB_PAGES_REPO=git@github.com:hazelement/hazelement.github.io.git
+GITHUB_PAGES_BRANCH=master
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -118,7 +123,7 @@ cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
 github: publish
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	git push origin $(GITHUB_PAGES_BRANCH)
+	${GHPIMPORT} ${OUTPUTDIR} -b ${GITHUB_STAGING_BRANCH}
+	git push ${GITHUB_PAGES_REPO} ${GITHUB_STAGING_BRANCH}:${GITHUB_PAGES_BRANCH} -f
 
 .PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
