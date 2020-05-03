@@ -33,6 +33,19 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = [
+    "extract_toc",
+    "liquid_tags.img",
+    "liquid_tags.include_code",
+    "neighbors",
+    "related_posts",
+    "render_math",
+    "series",
+    "share_post",
+    "tipue_search",
+]
+
 
 # Blogroll
 # LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -100,4 +113,4 @@ LINKS
 # Social widget
 SOCIAL = (
           ('github', 'https://github.com/hazelement'),
-          )
+          )   )
