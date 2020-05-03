@@ -21,7 +21,7 @@ def main(pelicanconf, host, port):
         try:
             p.run()
         except SystemExit as e:
-            pass
+            print(e)
 
     server = Server()
     server.watch(p.settings['PATH'], compile)

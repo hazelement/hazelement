@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'Haze'
 SITENAME = u'Coding Digests'
 SIDEBAR_DIGEST = u"A bit from everyday"
-SITEURL = 'https://hazelement.github.io/'
+SITEURL = 'https://hazelement.github.io'
 # SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
@@ -44,6 +44,21 @@ PLUGINS = [
     'series',
     'share_post',
     'tipue_search',
+]
+
+LANDING_PAGE_TITLE = "Welcome to " + SITENAME
+
+PROJECTS = [
+    {
+        'name': 'Creating and Maintaining This Website',
+        'url': f'{SITEURL}/using-pelican-for-blogging.html',
+        'description': 'Notes and articles about the creation and maintenance of this website.'
+    },
+    {
+        'name': 'Todo list for this site',
+        'url': f'{SITEURL}/todo-list-for-this-site.html',
+        'description': 'A list of pending items for this site'
+    },
 ]
 
 
