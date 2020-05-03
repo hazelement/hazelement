@@ -101,3 +101,9 @@ elif [[ $1 == "start" ]]; then
 else
   usage
 fi
+then
+    shut_down
+  fi
+else
+  usage
+fi

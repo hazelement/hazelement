@@ -5,10 +5,11 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/pelicanconf.py
 # PUBLISHCONF=$(BASEDIR)/publishconf.py
+PELICANOPTS=
 
+# executables
 PY?=$(BASEDIR)/pyenv/bin/python
 PELICAN?=$(BASEDIR)/pyenv/bin/pelican
-PELICANOPTS=
 GHPIMPORT=$(BASEDIR)/pyenv/bin/ghp-import
 
 FTP_HOST=localhost
@@ -42,6 +43,11 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
+setpermission:
+	@chmod +x $(PY)
+	@chmod +x $(PELICAN)
+	@chmod +x $(GHPIMPORT)
+
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -66,23 +72,23 @@ help:
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-html:
+html: setpermission
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
-regenerate:
+regenerate: setpermission
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-serve:
+serve: setpermission
 ifdef PORT
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server $(PORT)
 else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server
 endif
 
-serve-global:
+serve-global: setpermission
 ifdef SERVER
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server 80 $(SERVER)
 else
@@ -90,14 +96,14 @@ else
 endif
 
 
-devserver:
+devserver: setpermission
 ifdef PORT
 	$(BASEDIR)/develop_server.sh restart $(PORT)
 else
 	$(BASEDIR)/develop_server.sh restart
 endif
 
-stopserver:
+stopserver: setpermission
 	$(BASEDIR)/develop_server.sh stop
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
