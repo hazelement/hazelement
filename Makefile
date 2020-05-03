@@ -106,7 +106,7 @@ else
 	$(PY) devserver.py $(CONFFILE) localhost 8000
 endif
 
-publish:
+publish: prerequisites
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
