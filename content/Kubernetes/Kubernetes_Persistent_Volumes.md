@@ -27,8 +27,10 @@ When a PersistentVolumeClaim is created, a PersistentVolume is dynamically provi
 A **Secret** is an object that stores a piece of senstive information like a password or a key. Once a **Secret** is created, it can be refer to in manifest files like an environment variable. 
 
 Create a Secret object using the following command, replacing **YOUR_PASSWORD** with your own password. 
+
 ```
-kubectl create secret generic mysql-pass --from-literal=password=YOUR_PASSWORD
+$ kubectl create secret generic mysql-pass --from-literal=password=YOUR_PASSWORD
+
 ```
 
 This creates a `mysql-pass` object with key value pair `password` and `YOUR_PASSWORD`. 
@@ -209,7 +211,7 @@ spec:
 
 Create a WordPress Service and Deployment form the file `wordpress-deployment.yaml` file, 
 ```
-kubectl create -f wordpress-deployment.yaml
+$ kubectl create -f wordpress-deployment.yaml
 ```
 
 Verify that a PersistentVolume got dynamically provisioned, 
