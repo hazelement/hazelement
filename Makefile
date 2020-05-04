@@ -107,6 +107,7 @@ else
 endif
 
 publish: prerequisites
+	git push
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
