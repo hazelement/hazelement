@@ -163,4 +163,4 @@ Identify the problems with the following sentences:
 
 1.  In some places in the world, **kosher** has become slang for "acceptable usage." Many readers, however, will wonder how religious dietary laws pertain to software.
 2.  A **sticky wicket** is British slang, which does not travel well. Substituting the phrase **challenging problem** will fix this issue.
-3.  **Be that as it may** is an idiom. Substituting the transition **However** will fix this problem.
+3.  **Be that as it may** is an idiom. Substituting the transition **However** will fix this problem..
