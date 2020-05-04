@@ -8,4 +8,5 @@ Summary: This page maintains a list of things to do for this website
 
 
 
-[] `devserver` not detecting changes in `pelicanconf.py`
+[] `devserver` not detecting changes in `pelicanconf.py`.
+[] Replace pelican plugins folders with git submodule. 
