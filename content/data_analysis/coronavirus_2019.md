@@ -10,8 +10,7 @@ Summary: Analysis on current coronavirus situation.
 
 Here we put several country together and highlight significant events happened in each country. 
 
-Related source code and data can be found here, https://github.com/hazelement/wuhan-virus-study. 
-
+Related source code and data can be found [here](https://github.com/hazelement/wuhan-virus-study).
 ## Country incremental
 
 Daily updated chart.  
