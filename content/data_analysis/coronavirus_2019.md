@@ -10,13 +10,17 @@ Summary: Analysis on current coronavirus situation.
 
 Here we put several country together and highlight significant events happened in each country. 
 
-Related source code and data can be found here, https://github.com/hazelement/wuhan-virus-study. 
+Related source code and data can be found [here](https://github.com/hazelement/wuhan-virus-study).
+## Country incremental
 
-## Country incrementals
+Daily updated chart.  
+![alt text](https://s3-us-west-2.amazonaws.com/covid-19-plots/public/country_incrementals.png)
+
+Static chart.
 ![alt text](../images/country_incrementals.png)
 
 
-## Country accumulatives 
+## Country accumulative 
 ![alt text](../images/country_totals.png)
 
 
@@ -24,9 +28,9 @@ Related source code and data can be found here, https://github.com/hazelement/wu
 
 ### March 24
 
-* US has taken over Italy on daily incrementals.
+* US has taken over Italy on daily incremental.
 * Both US and Italy will have more cases than China
-* Italy has seen effective results from the lock down. Their daily incrementals is flattening out. 
+* Italy has seen effective results from the lock down. Their daily incremental is flattening out. 
 
 ### March 15
 

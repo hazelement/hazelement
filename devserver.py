@@ -23,6 +23,7 @@ def main(pelicanconf, host, port):
         except SystemExit as e:
             print(e)
 
+    compile()
     server = Server()
     server.watch(p.settings['PATH'], compile)
     server.watch(p.settings['THEME'], compile)
