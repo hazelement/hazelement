@@ -1,6 +1,6 @@
 Title: Coronavirus 2019 Analysis
 Date: 2020-03-15
-Modified: 2020-03-15
+Modified: 2020-05-12
 Tags: Data Analysis, Coronavirus
 Authors: Harry Zheng
 Summary: Analysis on current coronavirus situation. 
