@@ -15,7 +15,7 @@ I'm a Software Engineer since 2016. I worked in a start up focusing on AI using 
 
 I'm most keen on backend technology to build distributed systems with high availability and scalability. My most experience languages are Python and Java. Front end is my interest area but I spend time on them. It nice to build something beautiful but I believe the engine that's driving in behind the scene is more impressive. 
 
-# About this site
+# How to create this site?
 
 This site is auto generated from https://github.com/hazelement/hazelement using Pelican. I created a make file to automate the build process. 
 From project folder where `Makefile` is, using the following command. 
