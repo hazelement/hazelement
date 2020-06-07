@@ -77,13 +77,24 @@ help:
 clean-git:
 	git branch --merged | egrep -v "(^\*|master|dev|writing|theme)" | xargs git branch -d
 
-prepare-dev:
+UNAME_S := $(shell uname -s)
+
+DetectOS:
+	@echo $(UNAME_S)
+	-@make $(UNAME_S)
+
+Linux:
+	sudo apt-get install python3 -y
+	sudo apt-get install python3-pip -y
+	sudo apt install python3-virtualenv -y
+Darwin:
 	brew install python3
-	python3 -m pip install virtualenv
+	python3 -m pip install --user virtualenv
+
+prepare-dev: DetectOS
 	make prerequisites
 
 prerequisites: $(VENV_NAME)/bin/activate
-
 $(VENV_NAME)/bin/activate: requirements.txt
 	test -d $(VENV_NAME) || virtualenv -p python3 $(VENV_NAME)
 	${PY} -m pip install -U pip
