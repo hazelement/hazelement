@@ -13,9 +13,8 @@ There a lot of times we need to remote access a server. VNC is one of the common
 
 # Glossary
 
-* TightVNC
-* xfce
-* 
+* TightVNC, VNC server. 
+* xfce, a light desktop environment. 
 
 # Intallation
 
