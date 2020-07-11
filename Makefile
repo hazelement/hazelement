@@ -12,8 +12,8 @@ PELICANOPTS=
 # PELICAN?=$(BASEDIR)/pyenv/bin/pelican
 # GHPIMPORT=$(BASEDIR)/pyenv/bin/ghp-import
 
-VENV_NAME?=/tmp/pyenv
-# VENV_NAME?=$(BASEDIR)/pyenv
+# VENV_NAME?=./pyenv
+VENV_NAME?=$(BASEDIR)/pyenv
 PY?=$(VENV_NAME)/bin/python
 PELICAN?=$(VENV_NAME)/bin/pelican
 GHPIMPORT=$(VENV_NAME)/bin/ghp-import
@@ -89,7 +89,7 @@ Linux:
 	sudo apt install python3-virtualenv -y
 Darwin:
 	brew install python3
-	python3 -m pip install --user virtualenv
+	python3 -m pip install virtualenv
 
 prepare-dev: DetectOS
 	make prerequisites
