@@ -87,6 +87,7 @@ THEME = "themes/elegant"
 # Following items are often useful when publishing
 # DISQUS_SITENAME = ""
 DISQUS_SITENAME = "https-hazelement-github-io"
+
 GOOGLE_ANALYTICS = "UA-137819228-1"
 
 IDEBAR_DIGEST = 'Programmer and Web Developer'
