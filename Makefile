@@ -12,10 +12,11 @@ PELICANOPTS=
 # PELICAN?=$(BASEDIR)/pyenv/bin/pelican
 # GHPIMPORT=$(BASEDIR)/pyenv/bin/ghp-import
 
-VENV_NAME?=pyenv
-PY?=$(BASEDIR)/$(VENV_NAME)/bin/python
-PELICAN?=$(BASEDIR)/$(VENV_NAME)/bin/pelican
-GHPIMPORT=$(BASEDIR)/$(VENV_NAME)/bin/ghp-import
+# VENV_NAME?=./pyenv
+VENV_NAME?=$(BASEDIR)/pyenv
+PY?=$(VENV_NAME)/bin/python
+PELICAN?=$(VENV_NAME)/bin/pelican
+GHPIMPORT=$(VENV_NAME)/bin/ghp-import
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -76,18 +77,29 @@ help:
 clean-git:
 	git branch --merged | egrep -v "(^\*|master|dev|writing|theme)" | xargs git branch -d
 
-prepare-dev:
+UNAME_S := $(shell uname -s)
+
+DetectOS:
+	@echo $(UNAME_S)
+	-@make $(UNAME_S)
+
+Linux:
+	sudo apt-get install python3 -y
+	sudo apt-get install python3-pip -y
+	sudo python3 -m pip install virtualenv
+Darwin:
 	brew install python3
 	python3 -m pip install virtualenv
+
+prepare-dev: DetectOS
 	make prerequisites
 
 prerequisites: $(VENV_NAME)/bin/activate
-
 $(VENV_NAME)/bin/activate: requirements.txt
 	test -d $(VENV_NAME) || virtualenv -p python3 $(VENV_NAME)
+	virtualenv -p python3 $(VENV_NAME)
 	${PY} -m pip install -U pip
 	$(PY) -m pip install -r requirements.txt
-	touch $(VENV_NAME)/bin/activate
 
 html: prerequisites
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
