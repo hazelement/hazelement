@@ -86,7 +86,7 @@ DetectOS:
 Linux:
 	sudo apt-get install python3 -y
 	sudo apt-get install python3-pip -y
-	sudo apt install python3-virtualenv -y
+	sudo python3 -m pip install virtualenv
 Darwin:
 	brew install python3
 	python3 -m pip install virtualenv
@@ -97,6 +97,7 @@ prepare-dev: DetectOS
 prerequisites: $(VENV_NAME)/bin/activate
 $(VENV_NAME)/bin/activate: requirements.txt
 	test -d $(VENV_NAME) || virtualenv -p python3 $(VENV_NAME)
+	virtualenv -p python3 $(VENV_NAME)
 	${PY} -m pip install -U pip
 	$(PY) -m pip install -r requirements.txt
 
