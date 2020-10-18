@@ -1,6 +1,6 @@
 Title: Coronavirus 2019 Analysis
 Date: 2020-03-15
-Modified: 2020-03-15
+Modified: 2020-05-12
 Tags: Data Analysis, Coronavirus
 Authors: Harry Zheng
 Summary: Analysis on current coronavirus situation. 
@@ -13,7 +13,8 @@ Here we put several country together and highlight significant events happened i
 Related source code and data can be found [here](https://github.com/hazelement/wuhan-virus-study).
 ## Country incremental
 
-Daily updated chart.  
+Daily updated chart. On x axis we plot number of days since first 100 accumulative cases. On y axis, we show daily incremental cases in log scale. With this chart, we can easily tell whether the virus is spreading exponentially or it's slowing down. 
+
 ![alt text](https://s3-us-west-2.amazonaws.com/covid-19-plots/public/country_incrementals.png)
 
 Static chart.
@@ -25,6 +26,12 @@ Static chart.
 
 
 ## Interesting spots:
+
+### May 12
+
+Canada, US and Italy have plateaued. However, we do see South Korea is struggling in the last few days. It's a good indication that the virus can easily bounce back if people don't follow social distancing properly. 
+
+Both US and Canada has started easing virus lock down rules last week. So we will how the curve trends in 2 weeks. 
 
 ### March 24
 
@@ -58,3 +65,5 @@ Important call out:
 * [Italy](https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy)
 * [NYTimes](https://www.nytimes.com/article/coronavirus-timeline.html)
 * [Coronavirus pandemic](https://en.wikipedia.org/wiki/Timeline_of_the_2019%E2%80%9320_coronavirus_pandemic)
+
+
