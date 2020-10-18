@@ -60,11 +60,11 @@ Watchtower automatically updates all docker containers to their latest images.
 
 An admin web UI to see and mamange running containers. 
 
-# VirtualBox
-
 ## Pihole
 
-To filter out adds, I run a pihole services in VirtualBox. It uses bridge network adapter so it gets its own IP address. This is to avoid conflict with bind DNS running on host. 
+DNS based ad blocker
+
+# VirtualBox
 
 ## OneDrive
 
@@ -73,6 +73,7 @@ I have a windows machine running in VirtualBox. It syncs my Onedrive and share t
 ## GameServers
 
 I also have some VMs running as game servers. 
+
 
 # DNS resolution
 
