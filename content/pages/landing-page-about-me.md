@@ -21,6 +21,9 @@ This site is auto generated from https://github.com/hazelement/hazelement using 
 From project folder where `Makefile` is, using the following command. 
 
 ```
+# to prepare dev environment
+make prepare-dev
+
 # to compile and publish to github
 make github
 
