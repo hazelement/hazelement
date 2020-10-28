@@ -86,10 +86,10 @@ DetectOS:
 Linux:
 	sudo apt-get install python3 -y
 	sudo apt-get install python3-pip -y
-	sudo python3 -m pip install virtualenv
+	sudo python3 -m pip install virtualenv==16.7.10
 Darwin:
 	brew install python3
-	python3 -m pip install virtualenv
+	python3 -m pip install virtualenv==16.7.10
 
 prepare-dev: DetectOS
 	make prerequisites
